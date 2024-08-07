@@ -29,7 +29,11 @@ unpublished         : false
 
 # Plugins
 whitelist           : []
-plugins             : []
+#plugins             : []
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
 
 # Conversion
 markdown            : kramdown
@@ -52,7 +56,7 @@ timezone            : null
 
 quiet               : false
 verbose             : false
-defaults            : []
+#defaults            : []
 
 liquid:
   error_mode        : warn
@@ -69,3 +73,24 @@ kramdown:
   hard_wrap         : false
   footnote_nr       : 1
   show_warnings     : false
+
+# Collections
+collections:
+  authors:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
