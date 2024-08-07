@@ -1,2 +1,2 @@
-# dang-it-landing
-Dang IT Website landing page
+# Dang IT Website
+Hello world!
